@@ -22,7 +22,7 @@ jobs:
        password: ${{ secrets.DOCKERHUB_TOKEN }}
        
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag eliasvr/pe_bs2:$(date +%s)
+      run: docker build . --file Dockerfile --tag eliasvr/pe_bs2:v1.0
       
     - name: Docker Push
-      run: docker push eliasvr/pe_bs2
+      run: docker push eliasvr/pe_bs2:v1.0
